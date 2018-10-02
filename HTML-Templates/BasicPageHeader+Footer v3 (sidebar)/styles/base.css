@@ -1,0 +1,85 @@
+/* CSS for headers and footers*/
+body{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 300;
+  min-height: 400px;
+  background-color:white;
+  color:#212529;
+}
+.container-fluid {
+  text-align: center;
+  padding-top:100px;
+  /*set height:100% only if content is less than screen size. Otherwise, container-fluid auto extends its height to include content*/
+}
+.header{
+  z-index:1000;
+  width: 400px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+#sidebar_button{
+  display:inline;
+}
+.header i{
+  font-size:30px;
+  margin-left:20px;
+  margin-top:20px;
+  cursor:pointer;
+}
+.header_title{
+  font-weight: 390;
+  font-size:30px;
+  width: 100px;
+  margin-left:10px;
+  display:inline;
+  text-align: center;
+}
+.sidebar{
+  display: inline;
+  height:100%;
+  background-color:whitesmoke;
+  position: absolute;
+  width:200px;
+  z-index:1000;
+  -webkit-transform: translate(-200px,0px);
+      -ms-transform: translate(-200px,0px);
+          transform: translate(-200px,0px);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+.sidebar .header_link{
+  font-size:25px;
+  height:100px;
+  line-height: 100px;
+  padding-left:20px;
+  cursor:pointer;
+  width:200px;
+  display:block;
+  -webkit-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+.sidebar .header_link:hover{
+  background-color:white;
+  text-decoration: none;
+  
+}
+.footer{
+  position: absolute;
+  width:100%;
+  height:50px;
+  bottom: 0px;
+  margin:none;
+  text-align: center;
+  background-color: RGB(52,58,64);
+  color:white;
+  z-index:2000;
+}

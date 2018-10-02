@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Make sure mobile width is width of mobile viewport-->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>My Site</title>
+  <!-- Style sheets: Including Bootstrap and Font Awesome (svg icons) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel ="stylesheet" href="styles/base.css">
+  <link rel ="stylesheet" href="styles/index.css">
+  
+  <!--Scripts: including jQuery and bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!--Add additional scripts here-->
+    
+</head>
+<body>
+  <script>
+    //This is not jquery dependent
+    var sidebar_on = false;
+    function sidebar(){
+      var sideb = document.getElementsByClassName('sidebar');
+      var header = document.getElementsByClassName('header');
+      var header_icon = document.getElementById('sidebar_button');
+      if (sidebar_on == false){
+        sideb[0].style["transform"] = "translate(0,0)";
+        header[0].style["transform"] = "translate(200px,0)";
+        header_icon.innerHTML = "<i class=\"fas fa-times\" onclick=\"sidebar()\"></i>";
+        sidebar_on = true;
+      }
+      else {
+        sideb[0].style["transform"] = "translate(-200px,0)";
+        header[0].style["transform"] = "translate(0,0)";
+        header_icon.innerHTML = "<i class=\"fas fa-bars\" onclick=\"sidebar()\"></i>";
+        sidebar_on = false;
+      }
+
+    }
+  </script>
+  <div class="sidebar">
+    <a class="header_link" style="margin-top:100px;" href="">Link 1</a>
+    <a class="header_link" href="">Link 2</a>
+    <a class="header_link" href="">Link 3</a>
+  </div>
+  <div class="header">
+    <div id="sidebar_button">
+      <i class="fas fa-bars" onclick="sidebar()"></i>
+    </div>
+    <div class="header_title">Site Name</div>
+  </div>
+  <div class="container-fluid">
+    Content
+  </div>
+  <div class="footer" style="">
+  </div>
+</body>
+</html>

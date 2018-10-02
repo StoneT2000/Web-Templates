@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Make sure mobile width is width of mobile viewport-->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Draggable DIVS!</title>
+  <!-- Style sheets: Including Bootstrap and Font Awesome (svg icons) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel ="stylesheet" href="styles/base.css">
+  <link rel ="stylesheet" href="styles/index.css">
+  
+  <!--Scripts: including jQuery and bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!--Add additional scripts here-->
+  <script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>
+  <style>
+    #sortable div{
+      display:inline-block;
+      margin-right:10px;
+      background-color:RGB(54,55,57);
+      color:white;
+      height:50px;
+      width: 200px;
+      text-align: center;
+      font-size:30px;
+      line-height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <!--All page content goes here -->
+    <div class="mainContent">
+      <ul id="sortable" style="top:50%;position: absolute;margin-top:-50px;">
+        <div>TEST</div>
+        <div>TEST2</div>
+      </ul>
+    </div>
+  </div>
+  <!--
+  <div class="footer">
+    <span style="margin-right:4px;">By Stone T. @Github</span><a href="https://github.com/StoneT2000"><i class="fab fa-github"></i></a><span style="border-right: 1px solid #212529;margin:0px 10px 0px 10px;"></span><span style="margin-right:4px;">Email</span><a href="mailto:stoneztao@gmail.com"><i class="fa fa-envelope"></i></a>
+  </div>
+  -->
+</body>
+</html>
