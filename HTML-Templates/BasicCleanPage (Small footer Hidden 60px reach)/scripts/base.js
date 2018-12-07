@@ -4,7 +4,7 @@ $(document).ready(function () {
       $('.footer').css('transform','translateY(0px)');
     }
   ).mouseleave(function(){
-    $('.footer').css('transform','translateY(60px)');
+    $('.footer').css('transform','translateY(0px)');
   });
   $('.footer').mouseenter(function() {
     $('.footer').css('transform','translateY(0px)');

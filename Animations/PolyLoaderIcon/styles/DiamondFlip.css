@@ -1,0 +1,57 @@
+
+.DiamondFlip_anim_wrapper {
+  height:100px;
+  width:100px;
+  position:absolute;
+  background-color:RGB(165,203,257);
+  background-color:RGB(50,50,50);
+}
+.Diamond_top_left{
+  border-left: 50px solid transparent;
+  border-bottom: 50px solid RGB(240,240,240);
+  animation-delay: 1.5s;
+}
+.Diamond_top_right{
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid RGB(255,255,255);
+  left:50px;
+  animation-delay:2.25s;
+}
+.Diamond_bot_right{
+  border-right: 50px solid transparent;
+  border-top: 50px solid RGB(204,204,204);
+  top:50px;
+  left:50px;
+}
+.Diamond_bot_left{
+  border-left: 50px solid transparent;
+  border-top: 50px solid RGB(221,221,221);
+  top:50px;
+  animation-delay: 0.75s;
+}
+.DiamondFlip_anim_wrapper div {
+  position: absolute;
+  display: inline;
+  animation-name: popout;
+  animation-duration:6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes popout {
+  0% {
+    opacity:0;
+  }
+  45% {
+    opacity:0;
+  }
+  50% {
+    opacity:1;
+  }
+  95% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}

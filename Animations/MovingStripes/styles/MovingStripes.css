@@ -1,0 +1,38 @@
+
+.MovingStripes_anim_wrapper {
+  height:100%;
+  width: 100%;
+  background-color: gainsboro;
+  position: relative;
+  overflow:hidden;
+}
+.stripe {
+  height:1000px;
+  top:-100px;
+  width:50px;
+  display:inline-block;
+  transform: rotate(0deg);
+  transform-origin:top;
+  position: absolute;
+}
+.MovingStripes_anim_wrapper div:nth-child(even){
+  background-color:skyblue;
+}
+.MovingStripes_anim_wrapper div:nth-child(odd){
+  background-color:white;
+}
+.stripe {
+  animation-name: slide;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+  0% {
+    left:-100px;
+  }
+  100% {
+    left:calc(100% + 500px);
+  }
+}
